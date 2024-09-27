@@ -10,30 +10,41 @@
   --dark-color: #000;
 }
 
+.text {
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  font-size: 2.5vh;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  max-width: 80%; /* Mengubah dari 100% menjadi 80% */
+  width: 80vw; /* Menambahkan lebar tetap */
+  line-height: 1.5;
+  z-index: 1000;
+  padding: 2vh 4vw; /* Menambahkan padding */
+  background-color: rgba(0, 0, 0, 0.5); /* Menambahkan latar belakang semi-transparan */
+  border-radius: 2vh; /* Menambahkan sudut melengkung */
+}
+
 body {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column; /* Mengubah arah flex menjadi kolom */
+  align-items: center;
+  justify-content: flex-start; /* Mengubah dari center ke flex-start */
   min-height: 100vh;
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
-}
-
-.night {
-  position: fixed;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  filter: blur(0.1vmin);
-  background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+  padding-top: 40vh; /* Menambahkan padding atas untuk memberi ruang pada teks */
 }
 
 .flowers {
   position: relative;
   transform: scale(0.9);
+  margin-top: auto; /* Mendorong bunga ke bagian bawah */
 }
 
 .flower {
@@ -1319,3 +1330,6 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }/*# sourceMappingURL=main.css.map */
+
+
+  
